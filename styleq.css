@@ -1,0 +1,124 @@
+body{
+    background-color: bisque;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.nav{
+    position: fixed;
+    left: -10px;
+}
+
+.nav a{
+    position: absolute;
+    left: -180px;
+    width: 180px;
+    transition: 0.5s;
+    padding: 15px 30px 15px 30px;
+    border-radius: 0 10px 10px 0;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0);
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-family: Verdana;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav a:hover{
+    left: 0;
+    color: white;
+}
+
+#main_btn{
+    background-color: teal;
+    top: 95px;
+}
+
+#galery_btn{
+    background-color: teal;
+    top: 150px;
+}
+
+#quiz_btn{
+    background-color: teal;
+    top: 205px;
+}
+
+
+h1{
+    text-align: center;
+    font-size: 60px;
+    font-weight: 900;
+    font-family: fantasy;
+    font-variant: small-caps;
+    letter-spacing: 40px;
+}
+
+.outer_text_area{
+    text-align: center;
+    margin: auto;
+    width: 1000px;
+    border-radius: 20px;
+    background-color: rgba(187, 183, 183, 0.9);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.text_area{
+    margin: auto;
+    width: 800px;
+    text-align: left;
+    font-size: 18px;
+    font-family: Helvetica;
+}
+
+#centered{
+    text-align: center;
+}
+
+ul{
+    list-style-type: disc;
+    list-style-position: outside;
+}
+
+iframe{
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    border: none;
+}
+
+input[type=text], input[type=number], select{
+    width: 200px;
+    height: 25px;
+    text-align: left;
+    font-size: 18px;
+    font-family: Helvetica;
+    padding-left: 10px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+input[type=submit], input[type=reset]{
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    font-size: 18px;
+    font-family: Helvetica;
+    border-radius: 15px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin: 0 10px;
+}
+
+input[type=submit]:active, input[type=reset]:active{
+    width: 90px;
+    height: 27px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}

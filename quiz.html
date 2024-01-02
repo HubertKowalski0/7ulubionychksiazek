@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Hubert Kowalski">
+    <link rel="stylesheet" type="text/css" href="styleq.css">
+    <title>Quiz dla fanów</title>
+</head>
+<body>
+    <div class="nav">
+        <a href="index.html" id="main_btn">Strona główna</a>
+        <a href="galery.html" id="galery_btn">Galeria</a>
+        <a href="quiz.html" id="quiz_btn">Quiz</a>
+    </div>
+    <h1><span id="blue">Q</span><span id="white">ui</span><span id="red">z</span></h1>
+    <form id="form">
+        <div class="outer_text_area">
+            <div class="text_area">
+                <h2>1. Ile domów było w Hogwarcie?</h2>
+                <input type="number" min="0" max="4" value="0" name="q1">
+            </div>
+        </div>
+        <br>
+        <div class="outer_text_area">
+            <div class="text_area">
+                <h2>2. Jak nazywa się dyrektor Hogwartu?</h2>
+                <input type="text" name="q2">
+            </div>
+        </div>
+        <br>
+        <div class="outer_text_area">
+            <div class="text_area">
+                <h2>3. Który z założycieli Hogwartu zbudował komnatę tajemnic?</h2>
+                <input type="radio" value="Salazar Slytherin" name="q3" checked><label> Salazar Slytherin</label><br>
+                <input type="radio" value="Godryk Gryffindor" name="q3"><label> Godryk Gryffindor</label><br>
+                <input type="radio" value="Helga Hufflepuff" name="q3"><label> Helga Hufflepuff</label><br>
+                <input type="radio" value="Rovena Ravenclaw" name="q3"><label> Rovena Ravenclaw</label>
+            </div>
+        </div>
+        <br>
+        <div class="outer_text_area">
+            <div class="text_area">
+                <h2>4. Który z poniższych nauczycieli Hogwartu nosił w sobie Lorda Voldemorta</h2>
+                <select id="q4">
+                    <option value=" ">Wybierz opcję</option>
+                    <option value="Severus Snape">Severus Snape</option>
+                    <option value="Barty Crouch">Barty Crouch/Moody</option>
+                    <option value="Quirell">Quirell</option>
+                    <option value="Dolores Umbridge">Dolores Umbridge</option>
+                </select>
+            </div>
+        </div>
+        <br>
+        <div class="outer_text_area">
+            <div class="text_area">
+                <h2>5. Jak nazywa się dom Weasley'ów?</h2>
+                <input type="text" id="q5">
+            </div>
+        </div>
+        <br>
+        <div class="outer_text_area">
+            <div class="text_area" id="centered">
+                <input type="submit" onclick="check()">
+                <input type="reset">
+            </div>
+        </div>
+    </form>
+    
+    <script>
+
+        function check() {
+            var score=0;
+            var form = document.getElementById("form");
+            var q1 = form.elements[0].value;
+            var q2 = form.elements[1].value;
+            var q3 = form.querySelector('input[name="q3"]:checked').value;
+            var q4 = document.getElementById("q4");
+            var q4val = q4.options[q4.selectedIndex].value;
+            var q5 = document.getElementById("q5").value;
+            if(q1==4){
+                score++;
+            }
+            if(q2=="Albus Dumbledore"){
+                score++;
+            }
+            if(q3=="Salazar Slytherin"){
+                score++;
+            }
+            if(q4val=="Quirell"){
+                score++;
+            }
+            if(q5=="Nora"){
+                score++;
+            }
+            if(score<5)
+            {
+                alert(score+"/5\nSpróbuj ponownie");
+            }
+            else
+            {
+                alert(score+"/5\nDobra Robota!");
+            }
+        }
+    </script>
+</body>
+</html>
